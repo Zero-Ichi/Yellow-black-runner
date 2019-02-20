@@ -1,9 +1,8 @@
 fileFormatVersion: 2
-guid: 67b3e7290c262e847a281dbca0bff516
+guid: 3d1d8d0c3fafd5346970eb30aa53e2a8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: road&border_0
-    21300002: road&border_1
+    21300000: Dead (1)_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -111,27 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: road&border_0
+      name: Dead (1)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 249
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 13}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: road&border_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 371
+        x: 74
+        y: 62
+        width: 318
+        height: 408
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
