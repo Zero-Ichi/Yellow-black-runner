@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhysicsObject : MonoBehaviour
+public abstract class PhysicsObject : MonoBehaviour
 {
-    public float minGoundNormalY = .65f;
-    public float gravityModifier = 1f;
+    [SerializeField]
+    protected float minGoundNormalY = .65f;
+    [SerializeField]
+    protected float gravityModifier = 1f;
 
     protected bool isGrounded;
     protected Vector2 groundNormal;
@@ -19,12 +21,10 @@ public class PhysicsObject : MonoBehaviour
     protected RaycastHit2D[] hitBuffer = new RaycastHit2D[16];
 
     protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>();
-   
 
-    // Awake est appelé quand l'instance de script est chargée
-    private void Awake()
-    {
-    }
+    protected Vector2 TargetVelocity;
+
+    protected abstract void ComputeVelocity();
 
     // Cette fonction est appelée quand l'objet est activé et actif
     private void OnEnable()
@@ -47,20 +47,26 @@ public class PhysicsObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        TargetVelocity = Vector2.zero;
+        ComputeVelocity();
     }
 
     //use for physic thing
     private void FixedUpdate()
     {
         velocity += gravityModifier * Physics2D.gravity * Time.deltaTime;
-
+        velocity.x = TargetVelocity.x;
         //Toujours considerer que "isGrounded" est faux avant de recalculer la valeur
         isGrounded = false;
 
         Vector2 deltaPosition = velocity * Time.deltaTime;
 
-        Vector2 move = Vector2.up * deltaPosition.y;
+        Vector2 moveAlongGround = new Vector2(groundNormal.y, -groundNormal.x);
+
+        Vector2 move = moveAlongGround* deltaPosition.x;
+        Mouvement(move, false);
+
+        move = Vector2.up * deltaPosition.y;
 
         Mouvement(move, true);
     }
@@ -90,10 +96,6 @@ public class PhysicsObject : MonoBehaviour
                     {
                         groundNormal = currentNormal;
                         currentNormal.x = 0;
-                    }
-                    else
-                    {
-
                     }
                 }
                 //Fait la difference entre les deux verctor et determine ce qu'on a besoin de 
