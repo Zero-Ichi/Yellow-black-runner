@@ -12,7 +12,7 @@ public class PlayerController : PhysicsObject
 
     private SpriteRenderer spriteRenderer;
     private Animator animator;
-
+  
     private bool isDead = false;
 
     void Awake()
@@ -58,5 +58,7 @@ public class PlayerController : PhysicsObject
     public void Dead(bool isDead)
     {
         this.isDead = isDead;
+        Debug.Log("Shinneeeeee!!!!!");
+        
     }
 }
