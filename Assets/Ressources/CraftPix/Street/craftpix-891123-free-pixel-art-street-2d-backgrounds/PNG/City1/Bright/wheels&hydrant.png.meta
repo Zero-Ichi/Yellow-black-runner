@@ -3,6 +3,7 @@ guid: ae01da573ce7b8f4fabc796ea6853b4f
 TextureImporter:
   fileIDToRecycleName:
     21300000: wheels&hydrant_0
+    21300002: wheels&hydrant_1
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -113,13 +114,27 @@ TextureImporter:
       name: wheels&hydrant_0
       rect:
         serializedVersion: 2
-        x: 695
+        x: 696
         y: 232
-        width: 195
+        width: 196
         height: 244
       alignment: 0
       pivot: {x: 0, y: 0}
-      border: {x: 13, y: 12, z: 10, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: wheels&hydrant_1
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 180
+        width: 556
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
