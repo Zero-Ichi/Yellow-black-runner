@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleContrioller : MonoBehaviour {
+public class ObstacleController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -14,19 +14,17 @@ public class ObstacleContrioller : MonoBehaviour {
 		
 	}
 
-    // OnCollisionEnter2D est appelé quand ce collider2D/rigidbody2D commence à toucher un autre rigidbody2D/collider2D (moteur physique 2D uniquement)
-    private void OnCollisionEnter2D(Collision2D collision)
+    // OnTriggerEnter2D est appelé quand le Collider2D other entre dans le déclencheur (moteur physique 2D uniquement)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
-            {
-                player.Dead(true);
-            }
+                player.Dead(true);   
         }
-        
     }
+
 
 
 }

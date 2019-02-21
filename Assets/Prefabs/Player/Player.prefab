@@ -41,6 +41,7 @@ GameObject:
   - component: {fileID: 50966068483558292}
   - component: {fileID: 70253026125279048}
   - component: {fileID: 114709796115909160}
+  - component: {fileID: 95781498273858170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -55,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1581031163521196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.64, y: -0.88, z: 0}
+  m_LocalPosition: {x: -14.04, y: 0.33, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4863888159622444}
@@ -153,6 +154,23 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1065505103079918}
   m_Enabled: 1
+--- !u!95 &95781498273858170
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1581031163521196}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114709796115909160
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -167,7 +185,7 @@ MonoBehaviour:
   minGoundNormalY: 0.65
   gravityModifier: 1
   maxSpeed: 5
-  jumpTakeOffSpeed: 5
+  jumpTakeOffSpeed: 10
 --- !u!124 &124440180134021392
 Behaviour:
   m_ObjectHideFlags: 1
