@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,6 +13,8 @@ public class PlayerController : PhysicsObject
     private SpriteRenderer spriteRenderer;
     private Animator animator;
 
+    private bool isDead = false;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -21,6 +24,9 @@ public class PlayerController : PhysicsObject
 
     protected override void ComputeVelocity()
     {
+        if (isDead)
+            return;
+
         Vector2 move = Vector2.zero;
 
         move.x = Vector2.right.x;
@@ -44,9 +50,13 @@ public class PlayerController : PhysicsObject
         animator.SetBool("grounded", isGrounded);
         animator.SetFloat("velocityX", Mathf.Abs(velocity.x)/maxSpeed);
 
-
+        
         TargetVelocity = move * maxSpeed;
 
     }
 
+    public void Dead(bool isDead)
+    {
+        this.isDead = isDead;
+    }
 }
