@@ -48,7 +48,6 @@ public class PlayerController : PhysicsObject
         }
 
         animator.SetBool("grounded", isGrounded);
-        animator.SetFloat("velocityX", Mathf.Abs(velocity.x)/maxSpeed);
 
         
         TargetVelocity = move * maxSpeed;

@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802308525996396}
-  - component: {fileID: 60909778728213756}
+  - component: {fileID: 61872013439662656}
   m_Layer: 0
   m_Name: CameraLimit
   m_TagString: Untagged
@@ -805,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1768422230394420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.583889, y: 8.199993, z: -11}
+  m_LocalPosition: {x: -8.583889, y: 8.199992, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4068071280591682}
@@ -819,7 +819,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1351732251514000}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.082293, y: 6.1069546, z: 0}
+  m_LocalPosition: {x: 23.65, y: 0.6900072, z: 11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422372642905076}
@@ -909,9 +909,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.04
-  far clip plane: 5000.21
-  field of view: 179
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
   orthographic size: 10
   m_Depth: 0
@@ -929,8 +929,8 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!60 &60909778728213756
-PolygonCollider2D:
+--- !u!61 &61872013439662656
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -941,7 +941,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 171.63257, y: 15.163996}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -951,16 +951,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 371.2031, y: 28.19873}
-      - {x: 250.84306, y: 26.772652}
-      - {x: 14.784691, y: 24.345022}
-      - {x: -28.48103, y: 24.267456}
-      - {x: -28.23831, y: 4.198556}
-      - {x: -0.92456096, y: 4.334509}
-      - {x: 67.04503, y: 4.1488447}
-      - {x: 371.13327, y: 4.232528}
+  serializedVersion: 2
+  m_Size: {x: 399.74213, y: 21.83054}
+  m_EdgeRadius: 0
 --- !u!68 &68000417872936934
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -1168,7 +1161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 60909778728213756}
+  m_BoundingShape2D: {fileID: 0}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &114223821542969812
@@ -1214,19 +1207,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_ScreenX: 0.075
   m_ScreenY: 0.49999958
   m_CameraDistance: 10
-  m_DeadZoneWidth: 0.1
-  m_DeadZoneHeight: 0.8037045
+  m_DeadZoneWidth: 0.115
+  m_DeadZoneHeight: 0.9844743
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.819
-  m_SoftZoneHeight: 0.8037045
-  m_BiasX: 0.5
+  m_SoftZoneHeight: 0.9844743
+  m_BiasX: 0.4999999
   m_BiasY: 0
   m_GroupFramingMode: 2
   m_AdjustmentMode: 2
