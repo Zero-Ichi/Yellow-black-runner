@@ -32,7 +32,7 @@ public class PlayerController : PhysicsObject
         move.x = Vector2.right.x;
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            velocity.y = jumpTakeOffSpeed;
+            Jump(jumpTakeOffSpeed);
         }
         else if (Input.GetButtonUp("Jump"))
         {
@@ -53,6 +53,11 @@ public class PlayerController : PhysicsObject
         
         TargetVelocity = move * maxSpeed;
 
+    }
+
+    public void Jump(float jumpValue)
+    {
+        velocity.y = jumpValue;
     }
 
     public void Dead(bool isDead)
