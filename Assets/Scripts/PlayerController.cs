@@ -36,10 +36,10 @@ public class PlayerController : PhysicsObject
         }
         else if (Input.GetButtonUp("Jump"))
         {
-            if (velocity.y > 0)
-            {
-                velocity.y = velocity.y * .5f;
-            }
+            //if (velocity.y > 0)
+            //{
+            //    velocity.y = velocity.y * .5f;
+            //}
         }
         bool flipSprite = (spriteRenderer.flipX ? move.x > 0.01f : move.x < -0.01f);
         if (flipSprite)
@@ -47,7 +47,7 @@ public class PlayerController : PhysicsObject
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
-        animator.SetBool("grounded", isGrounded);
+      
 
         
         TargetVelocity = move * maxSpeed;
@@ -62,7 +62,7 @@ public class PlayerController : PhysicsObject
     public void Dead(bool isDead)
     {
         this.isDead = isDead;
-        Debug.Log("Shinneeeeee!!!!!");
-        
+        animator.SetBool("IsDead", isDead);
+
     }
 }

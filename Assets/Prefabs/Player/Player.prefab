@@ -128,7 +128,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1581031163521196}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ebf9a5d4618dbb842a1d0937942d9a70, type: 3}
   m_Name: 
@@ -136,7 +136,7 @@ MonoBehaviour:
   minGoundNormalY: 0.65
   gravityModifier: 5
   maxSpeed: 15
-  jumpTakeOffSpeed: 30
+  jumpTakeOffSpeed: 25
 --- !u!212 &212552135563259744
 SpriteRenderer:
   m_ObjectHideFlags: 1
