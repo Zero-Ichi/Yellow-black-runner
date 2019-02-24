@@ -160,6 +160,36 @@ Transform:
   m_PrefabParentObject: {fileID: 4434923923341240, guid: 652930c72561dca4bb6566c859947ff5,
     type: 2}
   m_PrefabInternal: {fileID: 1614948274}
+--- !u!1 &1051000798 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1190592631139054, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+    type: 2}
+  m_PrefabInternal: {fileID: 1917385563}
+--- !u!61 &1051000799
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051000798}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 171.63257, y: 15.163996}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 399.74213, y: 21.83054}
+  m_EdgeRadius: 0
 --- !u!1001 &1614948274
 Prefab:
   m_ObjectHideFlags: 0
@@ -246,6 +276,91 @@ Prefab:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 774731695}
-    m_RemovedComponents: []
+    - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 23.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.6900072
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835956344401300, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.199992
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_DeadZoneWidth
+      value: 0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 1768422230394420, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 60909778728213756, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].x
+      value: -28.243097
+      objectReference: {fileID: 0}
+    - target: {fileID: 60909778728213756, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_Points.m_Paths.Array.data[0].Array.data[3].y
+      value: 24.862282
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_DeadZoneHeight
+      value: 0.9844743
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_SoftZoneHeight
+      value: 0.9844743
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_BiasX
+      value: 0.4999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835956344401300, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.583889
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_XDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_YDamping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791729744208846, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
+        type: 2}
+      propertyPath: m_ZDamping
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 60909778728213756, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
   m_IsPrefabParent: 0

@@ -63,7 +63,7 @@ public abstract class PhysicsObject : MonoBehaviour
 
         Vector2 moveAlongGround = new Vector2(groundNormal.y, -groundNormal.x);
 
-        Vector2 move = moveAlongGround* deltaPosition.x;
+        Vector2 move = moveAlongGround * deltaPosition.x;
         Mouvement(move, false);
 
         move = Vector2.up * deltaPosition.y;
@@ -79,7 +79,7 @@ public abstract class PhysicsObject : MonoBehaviour
         {
             //Cast sert a regarder a la frame d'apres où on sera
             //shellRadius pour ajouter un peut de padding pour ne pas passer dans un autre Collider
-           int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
+            int count = rb2d.Cast(move, contactFilter, hitBuffer, distance + shellRadius);
             hitBufferList.Clear();
             for (int i = 0; i < count; i++)
             {
@@ -111,7 +111,7 @@ public abstract class PhysicsObject : MonoBehaviour
 
             }
         }
-        rb2d.position += move.normalized * distance ;
-        
+        rb2d.position += move.normalized * distance;
+
     }
 }
