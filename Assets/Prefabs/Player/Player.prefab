@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4434923923341240}
   - component: {fileID: 212552135563259744}
+  - component: {fileID: 114709796115909160}
   - component: {fileID: 50966068483558292}
   - component: {fileID: 70253026125279048}
-  - component: {fileID: 114709796115909160}
   - component: {fileID: 95781498273858170}
   - component: {fileID: 61926523465149856}
   m_Layer: 0

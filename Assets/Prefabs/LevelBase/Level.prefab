@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4802308525996396}
-  - component: {fileID: 61872013439662656}
+  - component: {fileID: 60866473699205190}
   m_Layer: 0
   m_Name: CameraLimit
   m_TagString: Untagged
@@ -805,7 +805,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1768422230394420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.583889, y: 8.199992, z: -11}
+  m_LocalPosition: {x: -8.583889, y: 7.8722987, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4068071280591682}
@@ -929,8 +929,8 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!61 &61872013439662656
-BoxCollider2D:
+--- !u!60 &60866473699205190
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -941,7 +941,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 171.63257, y: 15.163996}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -951,9 +951,12 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 399.74213, y: 21.83054}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 371.14, y: 30}
+      - {x: -28.23, y: 30}
+      - {x: -28.23, y: 4.25}
+      - {x: 371.14, y: 4.25}
 --- !u!68 &68000417872936934
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -1161,7 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ConfineMode: 0
   m_BoundingVolume: {fileID: 0}
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 60866473699205190}
   m_ConfineScreenEdges: 1
   m_Damping: 0
 --- !u!114 &114223821542969812
@@ -1211,16 +1214,16 @@ MonoBehaviour:
   m_YDamping: 0
   m_ZDamping: 0
   m_ScreenX: 0.075
-  m_ScreenY: 0.49999958
+  m_ScreenY: 0.48361492
   m_CameraDistance: 10
   m_DeadZoneWidth: 0.115
-  m_DeadZoneHeight: 0.9844743
+  m_DeadZoneHeight: 0.85384583
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
-  m_SoftZoneWidth: 0.819
-  m_SoftZoneHeight: 0.9844743
-  m_BiasX: 0.4999999
-  m_BiasY: 0
+  m_SoftZoneWidth: 0.81
+  m_SoftZoneHeight: 1.62
+  m_BiasX: 0.5
+  m_BiasY: -0.00000021873264
   m_GroupFramingMode: 2
   m_AdjustmentMode: 2
   m_GroupFramingSize: 0.8
