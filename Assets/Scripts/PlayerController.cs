@@ -36,6 +36,7 @@ public class PlayerController : PhysicsObject
         }
         else if (Input.GetButtonUp("Jump"))
         {
+            
             //if (velocity.y > 0)
             //{
             //    velocity.y = velocity.y * .5f;
@@ -47,9 +48,8 @@ public class PlayerController : PhysicsObject
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
-      
+        animator.SetBool("Grounded", isGrounded);
 
-        
         TargetVelocity = move * maxSpeed;
 
     }
@@ -57,6 +57,8 @@ public class PlayerController : PhysicsObject
     public void Jump(float jumpValue)
     {
         velocity.y = jumpValue;
+        isGrounded = true;
+        animator.SetBool("IsGoingUp", true);
     }
 
     public void Dead(bool isDead)
