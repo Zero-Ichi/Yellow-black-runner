@@ -157,6 +157,26 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 70253026125279048, guid: 652930c72561dca4bb6566c859947ff5,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -1.0564306
+      objectReference: {fileID: 0}
+    - target: {fileID: 70253026125279048, guid: 652930c72561dca4bb6566c859947ff5,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 2.1898408
+      objectReference: {fileID: 0}
+    - target: {fileID: 70253026125279048, guid: 652930c72561dca4bb6566c859947ff5,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -1.7615166
+      objectReference: {fileID: 0}
+    - target: {fileID: 70253026125279048, guid: 652930c72561dca4bb6566c859947ff5,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 1.0538979
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 652930c72561dca4bb6566c859947ff5, type: 2}
   m_IsPrefabParent: 0
@@ -477,34 +497,38 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 15.111111
+      value: 23.65
       objectReference: {fileID: 0}
     - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 6.050007
+      value: 0.6900072
       objectReference: {fileID: 0}
     - target: {fileID: 4900065806156704, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
         type: 2}
       propertyPath: near clip plane
-      value: 0.04
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
         type: 2}
       propertyPath: far clip plane
-      value: 5000.21
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 20838065082873644, guid: ff9fbbd64ff8ebd409e69d27a2213f63,
         type: 2}
       propertyPath: field of view
-      value: 179
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4162217969672002, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
       propertyPath: m_LocalPosition.x
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835956344401300, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -8.583889
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ff9fbbd64ff8ebd409e69d27a2213f63, type: 2}
