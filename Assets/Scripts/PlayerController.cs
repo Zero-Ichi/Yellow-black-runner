@@ -51,11 +51,6 @@ public class PlayerController : PhysicsObject
 
         animator.SetBool("Grounded", isGrounded);
         animator.SetFloat("VelocityY", velocity.y);
-        if (animator.GetBool("Hurt"))
-        {
-            animator.SetBool("Hurt", false);
-            Debug.Log("Fiou ! Ca va mieux ! ");
-        }
         TargetVelocity = move * maxSpeed;
 
     }
@@ -97,7 +92,6 @@ public class PlayerController : PhysicsObject
     {
         isHurt = !isHurt;
         animator.SetBool("Hurt", isHurt);
-
     }
 
     IEnumerator RecoverySpeed(float slowdownTime, float MaxSpeedOrigin)
