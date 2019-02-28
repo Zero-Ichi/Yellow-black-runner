@@ -49,6 +49,7 @@ public class PlayerController : PhysicsObject
         }
 
         animator.SetBool("Grounded", isGrounded);
+        animator.SetFloat("VelocityY", velocity.y);
 
         TargetVelocity = move * maxSpeed;
 
@@ -56,9 +57,11 @@ public class PlayerController : PhysicsObject
 
     public void Jump(float jumpValue)
     {
-        velocity.y = jumpValue;
-        isGrounded = true;
-        animator.SetBool("IsGoingUp", true);
+        if (!this.isDead)
+        {
+            velocity.y = jumpValue;
+            isGrounded = true;
+        }
     }
 
     public void Dead(bool isDead)
