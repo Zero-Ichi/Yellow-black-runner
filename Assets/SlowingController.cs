@@ -2,15 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillController : ObstacleController
+public class SlowingController : ObstacleController
 {
+    [SerializeField]
+    protected float slowdownTime = 5f;
+    [SerializeField]
+    protected float speedDivider = 2f;
+
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
-                player.Dead();
+            {
+                player.SlowDown(speedDivider, slowdownTime);
+                this.collider.enabled = false;
+            }
         }
+
     }
 }

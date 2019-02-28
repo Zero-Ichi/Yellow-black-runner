@@ -10,10 +10,11 @@ public class PlayerController : PhysicsObject
     [SerializeField]
     protected float jumpTakeOffSpeed = 5;
 
-    private SpriteRenderer spriteRenderer;
-    private Animator animator;
-  
-    private bool isDead = false;
+    protected SpriteRenderer spriteRenderer;
+    protected Animator animator;
+
+    protected bool isHurt = false;
+    protected bool isDead = false;
 
     void Awake()
     {
@@ -50,9 +51,30 @@ public class PlayerController : PhysicsObject
 
         animator.SetBool("Grounded", isGrounded);
         animator.SetFloat("VelocityY", velocity.y);
-
+        if (animator.GetBool("Hurt"))
+        {
+            animator.SetBool("Hurt", false);
+            Debug.Log("Fiou ! Ca va mieux ! ");
+        }
         TargetVelocity = move * maxSpeed;
 
+    }
+
+    public void SlowDown(float speedDivider, float slowdownTime)
+    {
+        if (isHurt)
+        {
+            this.Dead();
+        }
+        else
+        {
+            float MaxSpeedOrigin = maxSpeed;
+            maxSpeed /= speedDivider;
+            this.Hurt();
+            //Lance une fonction coroutine
+            StartCoroutine(RecoverySpeed(slowdownTime, MaxSpeedOrigin));
+            Debug.Log("Aïe !! je vais a : " + maxSpeed + " au lieux de " + MaxSpeedOrigin);
+        }
     }
 
     public void Jump(float jumpValue)
@@ -64,10 +86,27 @@ public class PlayerController : PhysicsObject
         }
     }
 
-    public void Dead(bool isDead)
+    public void Dead()
     {
-        this.isDead = isDead;
-        animator.SetBool("IsDead", isDead);
+        this.isDead = !this.isDead;
+        animator.SetBool("IsDead", this.isDead);
 
     }
+
+    private void Hurt()
+    {
+        isHurt = !isHurt;
+        animator.SetBool("Hurt", isHurt);
+
+    }
+
+    IEnumerator RecoverySpeed(float slowdownTime, float MaxSpeedOrigin)
+    {
+        //Attends le nombre de seconde passer en paramètre 
+        yield return new WaitForSeconds(slowdownTime);
+        maxSpeed = MaxSpeedOrigin;
+        this.Hurt();
+        Debug.Log("Speed " + maxSpeed);
+    }
+    
 }
