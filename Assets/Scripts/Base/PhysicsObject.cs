@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class PhysicsObject : MonoBehaviour
+public abstract class PhysicsObject : BaseController
 {
     [SerializeField]
     protected float minGoundNormalY = .65f;

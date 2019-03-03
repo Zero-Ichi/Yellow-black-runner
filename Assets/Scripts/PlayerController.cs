@@ -16,12 +16,14 @@ public class PlayerController : PhysicsObject
     protected bool isHurt = false;
     protected bool isDead = false;
 
-    void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
+
     }
-    
+
 
     protected override void ComputeVelocity()
     {
@@ -85,6 +87,7 @@ public class PlayerController : PhysicsObject
     {
         this.isDead = !this.isDead;
         animator.SetBool("IsDead", this.isDead);
+        GameManager.StopGame();
 
     }
 
