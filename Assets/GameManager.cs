@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour
         //Pas fou mais fait le taff pour le moment
         Time.timeScale = 0;
     }
+
     public float GetSpeed()
     {
         return gameSpeed;

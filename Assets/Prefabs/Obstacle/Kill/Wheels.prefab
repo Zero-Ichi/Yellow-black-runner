@@ -54,6 +54,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4733634916515804}
   - component: {fileID: 212620038997379642}
+  - component: {fileID: 61939297993706128}
+  - component: {fileID: 114415599659531232}
   m_Layer: 0
   m_Name: Wheels
   m_TagString: Untagged
@@ -81,7 +83,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777324401810078}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.045, y: 7.0800004, z: 0}
+  m_LocalPosition: {x: 34.34, y: 8.43, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4424592360313400}
@@ -127,6 +129,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.960581, y: 0.39823818}
   m_EdgeRadius: 0
+--- !u!61 &61939297993706128
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777324401810078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.56, y: 4.08}
+    newSize: {x: 5.56, y: 4.08}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!68 &68705779063662076
 EdgeCollider2D:
   m_ObjectHideFlags: 1
@@ -167,6 +194,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9d38c1e227e6de48b0cb9fbca6a9519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114415599659531232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1777324401810078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 552d70d1133a6ae4388f6345ddc117bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &212620038997379642

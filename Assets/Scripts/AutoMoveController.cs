@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorsController : BaseController
+public class AutoMoveController : BaseController
 {
 
     // Use this for initialization
