@@ -16,10 +16,9 @@ public class SlowingController : ObstacleController
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
             if (player != null)
             {
-                player.SlowDown(speedDivider, slowdownTime);
-                this.collider.enabled = false;
+                GameManager.SlowDown(speedDivider, slowdownTime);
+                this.Col.enabled = false;
             }
         }
-
     }
 }

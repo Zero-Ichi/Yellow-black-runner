@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public abstract class ObstacleController : MonoBehaviour
+public abstract class ObstacleController : BaseController
 {
-    protected Collider2D collider { get; set; }
-    private void Awake()
+    protected Collider2D Col{ get; set; }
+    protected override void Awake()
     {
-        collider = GetComponent<Collider2D>();
-        if (collider != null)
+        base.Awake();
+        Col = GetComponent<Collider2D>();
+        if (Col != null)
         {
-            collider.isTrigger = true;
+            Col.isTrigger = true;
         }
     }
-    // OnTriggerEnter2D est appelé quand le Collider2D other entre dans le déclencheur (moteur physique 2D uniquement)
+
     abstract protected void OnTriggerEnter2D(Collider2D collision);
 
 }

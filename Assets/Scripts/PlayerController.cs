@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class PlayerController : PhysicsObject
 {
-    [SerializeField]
-    protected float maxSpeed = 5;
+    
+    protected float maxSpeed = 0;
     [SerializeField]
     protected float jumpTakeOffSpeed = 5;
 
     protected SpriteRenderer spriteRenderer;
     protected Animator animator;
 
-    protected bool isHurt = false;
-    protected bool isDead = false;
+    public bool IsHurt { get; set; }
+    public bool IsDead { get; set; }
 
     protected override void Awake()
     {
@@ -27,7 +27,7 @@ public class PlayerController : PhysicsObject
 
     protected override void ComputeVelocity()
     {
-        if (isDead)
+        if (IsDead)
             return;
 
         Vector2 move = Vector2.zero;
@@ -57,26 +57,10 @@ public class PlayerController : PhysicsObject
 
     }
 
-    public void SlowDown(float speedDivider, float slowdownTime)
-    {
-        if (isHurt)
-        {
-            this.Dead();
-        }
-        else
-        {
-            float MaxSpeedOrigin = maxSpeed;
-            maxSpeed /= speedDivider;
-            this.Hurt();
-            //Lance une fonction coroutine
-            StartCoroutine(RecoverySpeed(slowdownTime, MaxSpeedOrigin));
-            Debug.Log("Aïe !! je vais a : " + maxSpeed + " au lieux de " + MaxSpeedOrigin);
-        }
-    }
 
     public void Jump(float jumpValue)
     {
-        if (!this.isDead)
+        if (!this.IsDead)
         {
             velocity.y = jumpValue;
             isGrounded = true;
@@ -85,25 +69,17 @@ public class PlayerController : PhysicsObject
 
     public void Dead()
     {
-        this.isDead = !this.isDead;
-        animator.SetBool("IsDead", this.isDead);
+        this.IsDead = !this.IsDead;
+        animator.SetBool("IsDead", this.IsDead);
         GameManager.StopGame();
 
     }
 
-    private void Hurt()
+    public void Hurt()
     {
-        isHurt = !isHurt;
-        animator.SetBool("Hurt", isHurt);
+        IsHurt = !IsHurt;
+        animator.SetBool("Hurt", IsHurt);
     }
 
-    IEnumerator RecoverySpeed(float slowdownTime, float MaxSpeedOrigin)
-    {
-        //Attends le nombre de seconde passer en paramètre 
-        yield return new WaitForSeconds(slowdownTime);
-        maxSpeed = MaxSpeedOrigin;
-        this.Hurt();
-        Debug.Log("Speed " + maxSpeed);
-    }
     
 }

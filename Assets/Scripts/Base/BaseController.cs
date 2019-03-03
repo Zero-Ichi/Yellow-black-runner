@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseController : MonoBehaviour {
-    protected GameManager GameManager;
+    protected GameManager GameManager { get; set; }
+
     protected virtual void Awake()
     {
         GameObject tmpManager = GameObject.Find("GameManager");
@@ -26,4 +27,5 @@ public class BaseController : MonoBehaviour {
 	void Update () {
 		
 	}
+
 }
